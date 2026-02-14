@@ -8,5 +8,10 @@
     "title": "2048",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png",
     "url": "https://joemama980.github.io/games/2048/index.html"
-  }
+  },
+  {
+  "title": "Retro Bowl",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/f/f0/Retro_Bowl_logo.png",
+  "url": "https://joemama980.github.io/games/retrobowl/index.html"
+}
 ]
