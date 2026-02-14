@@ -1,0 +1,32 @@
+const gameGrid = document.getElementById('game-grid');
+const overlay = document.getElementById('game-overlay');
+const gameFrame = document.getElementById('game-frame');
+const closeBtn = document.getElementById('close-btn');
+
+// 1. Fetch the games from JSON
+fetch('games.json')
+    .then(response => response.json())
+    .then(games => {
+        games.forEach(game => {
+            const card = document.createElement('div');
+            card.className = 'game-card';
+            card.innerHTML = `
+                <img src="${game.thumbnail}" alt="${game.title}">
+                <h3>${game.title}</h3>
+            `;
+            card.onclick = () => openGame(game.url);
+            gameGrid.appendChild(card);
+        });
+    });
+
+// 2. Open Game
+function openGame(url) {
+    gameFrame.src = url;
+    overlay.classList.remove('hidden');
+}
+
+// 3. Close Game
+closeBtn.onclick = () => {
+    overlay.classList.add('hidden');
+    gameFrame.src = ""; // Stops the game audio/processing
+};
