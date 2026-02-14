@@ -60,4 +60,11 @@ function filterGames() {
 
 function toggleMode() {
     document.body.classList.toggle('light-mode');
+    // Auto-Cloak when switching tabs
+window.onblur = function () {
+    document.title = "My Drive - Google Drive";
+    let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.href = "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png";
+    document.getElementsByTagName('head')[0].appendChild(link);
+};
 }
