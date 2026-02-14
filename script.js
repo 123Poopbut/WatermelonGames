@@ -1,16 +1,14 @@
-// 1. Fetch and Display Games
 const gameGrid = document.getElementById('game-grid');
 
+// 1. Fetch Games
 fetch('games.json')
     .then(response => response.json())
     .then(games => {
-        window.allGames = games; // Store for search filtering
+        window.allGames = games;
         displayGames(games);
-    })
-    .catch(err => console.error("Error loading games:", err));
+    });
 
 function displayGames(games) {
-    if (!gameGrid) return;
     gameGrid.innerHTML = '';
     games.forEach(game => {
         const card = document.createElement('div');
@@ -24,44 +22,42 @@ function displayGames(games) {
     });
 }
 
-// 2. Settings & Panic Logic
+// 2. Settings Functions
 function toggleSettings() {
-    const modal = document.getElementById('settings-modal');
-    modal.classList.toggle('hidden');
+    document.getElementById('settings-modal').classList.toggle('hidden');
 }
 
+function changeTabName(name) {
+    document.title = name || "ReadifyELA";
+}
+
+// 3. Panic Key Logic
 window.addEventListener('keydown', function(e) {
-    const pKey = document.getElementById('panic-key').value;
-    const pUrl = document.getElementById('panic-url').value;
-    
-    if (pKey && e.key === pKey) {
-        window.location.href = pUrl || "https://google.com";
+    const key = document.getElementById('panic-key').value;
+    const url = document.getElementById('panic-url').value;
+    if (key && e.key === key) {
+        window.location.href = url || "https://google.com";
     }
 });
 
-function changeTabName(name) {
-    document.title = name || "Watermelon Games";
+// 4. Game Overlay Functions
+function openGame(url) {
+    document.getElementById('game-frame').src = url;
+    document.getElementById('game-overlay').classList.remove('hidden');
 }
 
-// 3. Search & Game Overlay
+function closeGame() {
+    document.getElementById('game-overlay').classList.add('hidden');
+    document.getElementById('game-frame').src = "";
+}
+
+// 5. Search & Mode
 function filterGames() {
     const term = document.getElementById('searchBar').value.toLowerCase();
     const filtered = window.allGames.filter(g => g.title.toLowerCase().includes(term));
     displayGames(filtered);
 }
 
-function openGame(url) {
-    document.getElementById('game-frame').src = url;
-    document.getElementById('game-overlay').classList.remove('hidden');
-}
-
-document.getElementById('close-btn').onclick = () => {
-    document.getElementById('game-overlay').classList.add('hidden');
-    document.getElementById('game-frame').src = "";
-};
-
 function toggleMode() {
     document.body.classList.toggle('light-mode');
-    const btn = document.getElementById('mode-toggle');
-    btn.innerText = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
 }
