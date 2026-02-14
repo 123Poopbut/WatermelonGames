@@ -1,8 +1,15 @@
 body {
     background-color: #121212;
     color: white;
+    transition: 0.3s;
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #121212;
 }
 
 header {
@@ -11,7 +18,25 @@ header {
     background: #1f1f1f;
 }
 
+body.light-mode header { background: #dddddd; }
+
 header span { color: #00ff88; }
+
+.controls { margin-top: 15px; display: flex; justify-content: center; gap: 10px; }
+
+#searchBar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+#mode-toggle {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
 
 .grid-container {
     display: grid;
@@ -29,11 +54,12 @@ header span { color: #00ff88; }
     transition: transform 0.2s;
 }
 
+body.light-mode .game-card { background: white; border: 1px solid #ccc; }
+
 .game-card:hover { transform: scale(1.05); border: 1px solid #00ff88; }
 
 .game-card img { width: 100%; border-radius: 8px; }
 
-/* Overlay Styling */
 #game-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -43,13 +69,5 @@ header span { color: #00ff88; }
 }
 
 .hidden { display: none !important; }
-
 #game-frame { flex-grow: 1; width: 100%; border: none; }
-
-#close-btn {
-    padding: 10px;
-    background: #ff4444;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+#close-btn { padding: 10px; background: #ff4444; color: white; border: none; cursor: pointer; }
