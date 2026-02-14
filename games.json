@@ -23,5 +23,10 @@
     "title": "Minecraft",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
     "url": "https://joemama980.github.io/games/mc/index.html"
+  },
+  {
+    "title": "Tetris",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tetris_Graphism.png",
+    "url": "https://joemama980.github.io/games/tetris/index.html"
   }
 ]
