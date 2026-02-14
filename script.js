@@ -1,19 +1,35 @@
-// Function to show/hide settings
+// 1. Fetch and Display Games
+const gameGrid = document.getElementById('game-grid');
+
+fetch('games.json')
+    .then(response => response.json())
+    .then(games => {
+        window.allGames = games; // Store for search filtering
+        displayGames(games);
+    })
+    .catch(err => console.error("Error loading games:", err));
+
+function displayGames(games) {
+    if (!gameGrid) return;
+    gameGrid.innerHTML = '';
+    games.forEach(game => {
+        const card = document.createElement('div');
+        card.className = 'game-card';
+        card.innerHTML = `
+            <img src="${game.thumbnail}" alt="${game.title}">
+            <h3>${game.title}</h3>
+        `;
+        card.onclick = () => openGame(game.url);
+        gameGrid.appendChild(card);
+    });
+}
+
+// 2. Settings & Panic Logic
 function toggleSettings() {
     const modal = document.getElementById('settings-modal');
-    if (modal.classList.contains('hidden')) {
-        modal.classList.remove('hidden');
-    } else {
-        modal.classList.add('hidden');
-    }
+    modal.classList.toggle('hidden');
 }
 
-// Tab Cloak Function
-function changeTabName(name) {
-    document.title = name || "Watermelon Games";
-}
-
-// Panic Key Listener
 window.addEventListener('keydown', function(e) {
     const pKey = document.getElementById('panic-key').value;
     const pUrl = document.getElementById('panic-url').value;
@@ -23,4 +39,29 @@ window.addEventListener('keydown', function(e) {
     }
 });
 
-// ... Keep your other game fetching and display functions below this ...
+function changeTabName(name) {
+    document.title = name || "Watermelon Games";
+}
+
+// 3. Search & Game Overlay
+function filterGames() {
+    const term = document.getElementById('searchBar').value.toLowerCase();
+    const filtered = window.allGames.filter(g => g.title.toLowerCase().includes(term));
+    displayGames(filtered);
+}
+
+function openGame(url) {
+    document.getElementById('game-frame').src = url;
+    document.getElementById('game-overlay').classList.remove('hidden');
+}
+
+document.getElementById('close-btn').onclick = () => {
+    document.getElementById('game-overlay').classList.add('hidden');
+    document.getElementById('game-frame').src = "";
+};
+
+function toggleMode() {
+    document.body.classList.toggle('light-mode');
+    const btn = document.getElementById('mode-toggle');
+    btn.innerText = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+}
