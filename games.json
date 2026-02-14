@@ -1,27 +1,27 @@
 [
   {
     "title": "Flappy Bird",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png",
+    "thumbnail": "https://raw.githubusercontent.com/samuelcust/flappy-bird-assets/master/sprites/bluebird-midflap.png",
     "url": "https://joemama980.github.io/games/flappy/index.html"
   },
   {
     "title": "2048",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2048_logo.svg/1200px-2048_logo.svg.png",
+    "thumbnail": "https://raw.githubusercontent.com/gabrielecirulli/2048/master/meta/apple-touch-icon.png",
     "url": "https://joemama980.github.io/games/2048/index.html"
   },
   {
     "title": "Retro Bowl",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/f/f0/Retro_Bowl_logo.png",
+    "thumbnail": "https://raw.githubusercontent.com/skid9000/retro-bowl/main/icon.png",
     "url": "https://joemama980.github.io/games/retrobowl/index.html"
   },
   {
     "title": "Subway Surfers",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/ad/Subway_Surfers_logo.png",
+    "thumbnail": "https://raw.githubusercontent.com/skid9000/subway-surfers/main/icon.png",
     "url": "https://joemama980.github.io/games/subwaysurfers/index.html"
   },
   {
     "title": "Run 3",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c5/Run_3_cover_art.png",
+    "thumbnail": "https://raw.githubusercontent.com/skid9000/run-3/main/icon.png",
     "url": "https://joemama980.github.io/games/run3/index.html"
   }
 ]
