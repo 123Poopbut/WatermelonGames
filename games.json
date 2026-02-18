@@ -1,37 +1,34 @@
 [
   {
     "title": "Flappy Bird",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png",
     "url": "https://joemama980.github.io/games/flappy/index.html"
   },
   {
     "title": "2048",
-    "thumbnail": "https://raw.githubusercontent.com/gabrielecirulli/2048/master/meta/apple-touch-icon.png",
     "url": "https://joemama980.github.io/games/2048/index.html"
   },
   {
     "title": "Retro Bowl",
-    "thumbnail": "https://img.itch.zone/aW1nLzI4MDgxMTEucG5n/original/n%2FHSXN.png",
     "url": "https://joemama980.github.io/games/retrobowl/index.html"
   },
   {
     "title": "Subway Surfers",
-    "thumbnail": "https://img.itch.zone/aW1nLzI5Mjc5MjgucG5n/original/D%2Bv%2F%2Fm.png",
     "url": "https://joemama980.github.io/games/subwaysurfers/index.html"
   },
   {
     "title": "Minecraft",
-    "thumbnail": "https://img.itch.zone/aW1nLzIyNTQ2MzcucG5n/original/U8vK%2BF.png",
     "url": "https://joemama980.github.io/games/mc/index.html"
   },
   {
     "title": "Tetris",
-    "thumbnail": "https://img.itch.zone/aW1nLzI3ODc5MzcucG5n/original/vN0X6x.png",
     "url": "https://joemama980.github.io/games/tetris/index.html"
   },
   {
     "title": "Super Mario 64",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/2b/Super_Mario_64_box_art.jpg",
     "url": "https://joemama980.github.io/games/sm64/index.html"
+  },
+  {
+    "title": "BitLife",
+    "url": "https://joemama980.github.io/games/bitlife/index.html"
   }
 ]
