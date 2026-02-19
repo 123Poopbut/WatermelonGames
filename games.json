@@ -1,22 +1,17 @@
 [
-  { "title": "Flappy Bird", "url": "https://joemama980.github.io/games/flappy/index.html" },
-  { "title": "Retro Bowl", "url": "https://joemama980.github.io/games/retrobowl/index.html" },
-  { "title": "Subway Surfers", "url": "https://joemama980.github.io/games/subwaysurfers/index.html" },
-  { "title": "Minecraft", "url": "https://joemama980.github.io/games/mc/index.html" },
-  { "title": "Tetris", "url": "https://joemama980.github.io/games/tetris/index.html" },
-  { "title": "Super Mario 64", "url": "https://joemama980.github.io/games/sm64/index.html" },
-  { "title": "BitLife", "url": "https://joemama980.github.io/games/bitlife/index.html" },
-  { "title": "World's Hardest Game", "url": "https://joemama980.github.io/games/worldshardestgame/index.html" },
-  { "title": "Baldi's Basics", "url": "https://joemama980.github.io/games/baldisbasics/index.html" },
-  { "title": "Slope", "url": "https://joemama980.github.io/games/slope/index.html" },
-  { "title": "Papa's Burgeria", "url": "https://joemama980.github.io/games/papasburgeria/index.html" },
-  { "title": "Crossy Road", "url": "https://joemama980.github.io/games/crossy/index.html" },
-  { "title": "Fruit Ninja", "url": "https://joemama980.github.io/games/fruitninja/index.html" },
-  { "title": "Escaping the Prison", "url": "https://joemama980.github.io/games/escapingtheprison/index.html" },
-  { 
-    "title": "Speed Stars", 
-    "url": "https://mehmetgayalo.southern.com.my/main/https://3kh0-assets.silvereen.net/speed-stars/index.html",
-    "status": "offline",
-    "launch": "tab"
+  {
+    "title": "Retro Bowl",
+    "thumbnail": "https://play-lh.googleusercontent.com/TM_fbe99_S8UayE90vD196Oa286Tf1_2XmO246A1rYQyXv8p7V-A=w240-h480",
+    "url": "https://joemama980.github.io/games/retrobowl/index.html"
+  },
+  {
+    "title": "Subway Surfers",
+    "thumbnail": "https://play-lh.googleusercontent.com/9S98X_Y_F_fR-W_4_F_f-z=w240-h480",
+    "url": "https://joemama980.github.io/games/subwaysurfers/index.html"
+  },
+  {
+    "title": "Slope",
+    "thumbnail": "https://play-lh.googleusercontent.com/uC7uMv8P_A=w240-h480",
+    "url": "https://joemama980.github.io/games/slope/index.html"
   }
 ]
